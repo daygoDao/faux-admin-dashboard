@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+}
+
+main,
+header,
+nav {
+  border: 1px solid black;
+  width: 80vw;
+}
+
+nav {
+  display: grid;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  height: 100vh;
+  max-width: 20vw;
+}
+
+header {
+  height: 15vh;
+}
+
+main {
+  height: 85vh;
+  display: grid;
+  grid-template: 1fr / 2fr 1fr;
+}
+
+body {
+  display: grid;
+  grid-template: 1fr / 1fr 1fr;
+  background-color: lightblue;
+}
+
+.projects {
+  width: 80%;
+}
+
+.project-list {
+  display: grid;
+  grid-template: 1fr 1fr 1fr / 1fr 1fr;
+}
+
+.announcements,
+.trending {
+  width: 20%;
+}
