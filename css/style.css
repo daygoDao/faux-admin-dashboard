@@ -14,7 +14,14 @@ body {
   background-color: lightblue;
 }
 
+a {
+  color: white;
+  text-decoration: none;
+}
+
+/* nav section */
 nav {
+  background-color: salmon;
   grid-column: 1 / 2;
   grid-row: 1 / 3;
 }
@@ -29,7 +36,7 @@ nav ul {
 nav ul li {
   display: grid;
   grid-template-columns: .25fr .5fr;
-  margin: 1rem;
+  margin: 0.25rem 0;
 }
 
 nav a {
@@ -44,6 +51,7 @@ nav a {
   justify-self: center;
   margin: 1rem 2rem 0 1rem;
 }
+
 .home-logo h1,
 .home-logo img {
   margin: auto;
@@ -54,15 +62,80 @@ main {
   grid-column: 2/3;
 }
 
-/* header styles */
+
+/* header style! */
 header {
-  grid-row: 1/2;
+  padding: 0 1rem;
+  background-color: white;
 }
 
+.header-top,
+.header-bottom {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+}
 
+.header-search {
+  margin: auto 1rem;
+}
+
+.header-search img {
+  margin: -1rem 0;
+}
+
+header input {
+  width: 85%;
+  border-radius: 10px;
+  background-color: lightgray;
+}
+
+.header-greet img {
+  grid-row: 1/3;
+}
+
+.header-profile {
+  display: grid;
+  text-align: center;
+  grid-template-columns: .5fr .5fr 1fr;
+  margin: 1rem 10rem;
+}
+
+.header-profile img,
+.header-profile a,
+.header-profile span {
+  margin: auto;
+}
+
+.header-greet {
+  display: grid;
+  grid-template: 1fr 4fr / .5fr 4fr;
+  padding: 1rem;
+}
+
+.header-greet h2 {
+  margin: 1rem 0;
+}
+
+.header-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.header-actions button {
+  background-color: salmon;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 2.5rem 2.5rem;
+  cursor: pointer;
+  border-radius: 30px;
+}
 
 /* main section styles */
-main{
+main {
+  background-color: lightgrey;
   grid-row: 2/3;
   display: grid;
   grid-template-columns: 3fr 1.5fr;
@@ -71,13 +144,15 @@ main{
 .project-list {
   display: grid;
   grid-template: repeat(1, 1fr) / repeat(1, 1fr 1fr);
+  gap: 1rem;
 }
 
 .project {
   border: 3px solid white;
-  border-left: 5px solid orange;
-  margin: 1rem;
+  border-left: 10px solid orange;
+  padding: 1rem;
   background-color: white;
+  border-radius: 2%;
 }
 
 .fav-follow-fork {
@@ -89,11 +164,30 @@ main{
   background-color: white;
 }
 
+aside,
+.projects {
+  margin: 1rem 2rem;
+}
+.trending-people a {
+  color: black;
+}
+
 /* icon sizing */
 .fav-follow-fork img,
 nav img {
   width: 2.5rem;
   height: 2.5rem;
+}
+
+.profile-pic {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+}
+
+.header-greet img {
+  height: 5rem;
+  width: 5rem;
 }
 
 /* change project list to a single column */
